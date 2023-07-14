@@ -19,6 +19,9 @@ const ContactCard = (props) => {
           className="fa fa-trash text-2xl"
           style={{ color: "red" }}
           aria-hidden="true"
+          onClick={() => {
+            props.deleteHandler(email);
+          }}
         ></i>
       </div>
     </div>
