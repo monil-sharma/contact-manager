@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AddContacts = (props) => {
+  const navigate = useNavigate();
+
   const addContactHandler = props.addContactHandler;
   const [contact, setContact] = useState({ name: "", email: "" });
   //console.log(test1);
@@ -14,6 +17,7 @@ const AddContacts = (props) => {
     addContactHandler(contact);
     setContact({ name: "", email: "" });
     // console.log(contact);
+    navigate("/");
   };
 
   return (

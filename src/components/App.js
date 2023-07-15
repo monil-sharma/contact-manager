@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import { uuid } from "uuidv4";
 import "./App.css";
 import Header from "./Header";
@@ -26,8 +27,7 @@ function App() {
     const newContactList = contacts.filter((contact) => {
       return contact.email !== email;
     });
-    let temp = [...newContactList];
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(temp));
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newContactList));
     setContacts(newContactList);
   };
 
@@ -51,9 +51,24 @@ function App() {
 
   return (
     <div>
-      <Header />
-      <AddContacts addContactHandler={addContactHandler} />
-      <ContactList contacts={contacts} getContactEmail={removeContactHandler} />
+      <Router>
+        <Header />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <ContactList
+                contacts={contacts}
+                getContactEmail={removeContactHandler}
+              />
+            }
+          />
+          <Route
+            path="/add"
+            element={<AddContacts addContactHandler={addContactHandler} />}
+          />
+        </Routes>
+      </Router>
     </div>
   );
 }

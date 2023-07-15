@@ -1,5 +1,6 @@
 import { React } from "react";
 import ContactCard from "./ContactCard";
+import { Link } from "react-router-dom";
 
 const ContactList = (props) => {
   const deleteContactHandler = (email) => {
@@ -15,6 +16,20 @@ const ContactList = (props) => {
       />
     );
   });
-  return <div>{contactRenderedList}</div>;
+  return (
+    <div>
+      <div>
+        <h1>
+          Contact List
+          <Link to="/add">
+            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+              Add Contact
+            </button>
+          </Link>
+        </h1>
+      </div>{" "}
+      <div>{contactRenderedList}</div>;
+    </div>
+  );
 };
 export default ContactList;
