@@ -18,15 +18,18 @@ const ContactList = (props) => {
   });
   return (
     <div>
-      <div>
-        <h1>
-          Contact List
+      <div className="w-full max-w-xl flex justify-between mx-auto mt-6 mb-4">
+        <div>
+          <h1 className="text-3xl">Contact List</h1>
+        </div>
+        <div>
+          {" "}
           <Link to="/add">
-            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
               Add Contact
             </button>
           </Link>
-        </h1>
+        </div>
       </div>{" "}
       <div>{contactRenderedList}</div>;
     </div>
