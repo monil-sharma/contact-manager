@@ -1,4 +1,5 @@
 import { React } from "react";
+import { Link } from "react-router-dom";
 
 const ContactCard = (props) => {
   const { id, name, email } = props.contact;
@@ -9,20 +10,29 @@ const ContactCard = (props) => {
         <i className="fa fa-user-circle text-3xl mr-2" aria-hidden="true"></i>
       </div>
       <div className="w-full">
-        <div>{name}</div>
-        <div>
-          <div>{email}</div>
-        </div>
+        <Link to={`/contact/${email}`} state={{ contact: props.contact }}>
+          <div>{name}</div>
+          <div>
+            <div>{email}</div>
+          </div>
+        </Link>
       </div>
       <div className="flex justify-end">
-        <i
-          className="fa fa-trash text-2xl"
-          style={{ color: "red" }}
-          aria-hidden="true"
-          onClick={() => {
-            props.deleteHandler(email);
-          }}
-        ></i>
+        <Link
+          to={`/delete/${email}`}
+          state={{ contact: props.contact }}
+          // data={{ del: props.deleteHandler }}
+        >
+          {/* comment out this link*/}
+          <i
+            className="fa fa-trash text-2xl"
+            style={{ color: "red" }}
+            aria-hidden="true"
+            // onClick={() => {
+            //   props.deleteHandler(email);
+            // }}
+          ></i>
+        </Link>
       </div>
     </div>
   );
