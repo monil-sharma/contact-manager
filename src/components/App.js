@@ -60,7 +60,7 @@ function App() {
             element={
               <ContactList
                 contacts={contacts}
-                getContactEmail={removeContactHandler}
+                // getContactEmail={removeContactHandler}
               />
             }
           />

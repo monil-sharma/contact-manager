@@ -18,11 +18,7 @@ const ContactCard = (props) => {
         </Link>
       </div>
       <div className="flex justify-end">
-        <Link
-          to={`/delete/${email}`}
-          state={{ contact: props.contact }}
-          // data={{ del: props.deleteHandler }}
-        >
+        <Link to={`/delete/${email}`} state={{ contact: props.contact }}>
           {/* comment out this link*/}
           <i
             className="fa fa-trash text-2xl"

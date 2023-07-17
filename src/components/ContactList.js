@@ -3,15 +3,15 @@ import ContactCard from "./ContactCard";
 import { Link } from "react-router-dom";
 
 const ContactList = (props) => {
-  const deleteContactHandler = (email) => {
-    props.getContactEmail(email);
-  };
+  // const deleteContactHandler = (email) => {
+  //   props.getContactEmail(email);
+  // };
 
   const contactRenderedList = props.contacts.map((contact) => {
     return (
       <ContactCard
         contact={contact}
-        deleteHandler={deleteContactHandler}
+        // deleteHandler={deleteContactHandler}
         key={contact.email}
       />
     );

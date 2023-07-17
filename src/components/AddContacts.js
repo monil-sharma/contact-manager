@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const AddContacts = (props) => {
   const navigate = useNavigate();
@@ -66,9 +66,14 @@ const AddContacts = (props) => {
             }}
           ></input>
         </div>
-        <div className="flex items-center justify-end">
+        <div className="flex items-center justify-between">
+          <Link to="/">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+              Go Back
+            </button>
+          </Link>
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
           >
             Add
