@@ -18,7 +18,7 @@ const ContactList = (props) => {
   });
   return (
     <div>
-      <div className="w-full max-w-xl flex justify-between mx-auto mt-6 mb-4">
+      <div className="w-full max-w-xl flex justify-between mx-auto mt-10 mb-4">
         <div>
           <h1 className="text-3xl">Contact List</h1>
         </div>

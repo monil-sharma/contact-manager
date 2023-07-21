@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 const ContactCard = (props) => {
   const { id, name, email } = props.contact;
   return (
-    <div className="flex items-center w-full max-w-xl border mx-auto p-2 rounded-md mb-2">
+    <div className="  flex items-center w-full max-w-xl border  mx-auto p-2 rounded-md mb-2">
       <div>
         {" "}
         <i className="fa fa-user-circle text-3xl mr-2" aria-hidden="true"></i>
       </div>
-      <div className="w-full">
+      <div className="w-full text-sky-950">
         <Link to={`/contact/${email}`} state={{ contact: props.contact }}>
           <div>{name}</div>
           <div>

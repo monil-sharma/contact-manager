@@ -10,7 +10,7 @@ const ContactDetail = (props) => {
     <div className="mx-auto max-w-xs text-center mt-8">
       <div className="card border rounded w-full mb-4">
         <div>
-          <img src={userIMG} alt="no img" className="border-b"></img>
+          <img src={userIMG} alt="Dummy Image" className="border-b"></img>
         </div>
         <div className="content text-left w-full m-2">
           <div>{name}</div>

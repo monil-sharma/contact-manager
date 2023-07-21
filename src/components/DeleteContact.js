@@ -11,7 +11,7 @@ const DeleteContact = (props) => {
   };
   // state.delHandler.deleteHandler(state.contact.email);
   return (
-    <div className="max-w-lg mx-auto w-full mt-10">
+    <div className="max-w-lg mx-auto w-full mt-14">
       <p className="text-2xl text-center mb-6">
         Do you wish to delete {name}'s contact?
       </p>

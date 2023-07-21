@@ -21,7 +21,7 @@ const AddContacts = (props) => {
   };
 
   return (
-    <div className="mx-auto w-full max-w-xs mt-4 mb-7">
+    <div className="mx-auto w-full max-w-xs mt-14 mb-7">
       <form
         className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
         onSubmit={add}

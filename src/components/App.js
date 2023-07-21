@@ -51,7 +51,7 @@ function App() {
   // }, [contacts]);
 
   return (
-    <div>
+    <div className="h-full min-h-screen">
       <Router>
         <Header />
         <Routes>
