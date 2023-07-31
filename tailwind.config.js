@@ -7,7 +7,6 @@ module.exports = {
         transparent: "transparent",
         current: "currentColor",
         lightBluish: "#9AC5F4",
-        skyBluish: "#99DBF5",
       },
     },
   },
